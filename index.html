@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Aware 360 | Mantenimiento</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Se utiliza la fuente corporativa Onest -->
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Onest', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#05051A',     /* Azul extra oscuro del fondo */
+                            blue: '#0050E6',     /* Azul corporativo Be Aware */
+                            magenta: '#FF0055',  /* Magenta corporativo Be Aware */
+                            green: '#00E676',    /* Verde corporativo Be Aware */
+                            gray: '#A1A1AA'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #05051A;
+            color: #FFFFFF;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .glow-effect {
+            box-shadow: 0 0 40px rgba(255, 0, 85, 0.15), 0 0 80px rgba(0, 80, 230, 0.15);
+        }
+
+        .btn-hover-effect {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .btn-hover-effect:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 80, 230, 0.4);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-brand-magenta selection:text-white">
+
+    <header class="w-full px-8 lg:px-24 pt-10 pb-6 relative z-10">
+        <!-- Logo Be Aware 360 SVG -->
+        <svg width="220" height="40" viewBox="0 0 220 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Be Aware 360">
+            <!-- Círculo de puntos característico -->
+            <!-- Puntos Verdes (Arriba/Derecha) -->
+            <circle cx="20" cy="6" r="2.5" fill="#00E676"/>
+            <circle cx="28" cy="10" r="2.5" fill="#00E676"/>
+            <circle cx="34" cy="17" r="2.5" fill="#00E676"/>
+            <circle cx="34" cy="25" r="2.5" fill="#00E676"/>
+            <circle cx="28" cy="32" r="2.5" fill="#00E676"/>
+            <!-- Puntos Azules (Abajo/Izquierda) -->
+            <circle cx="20" cy="36" r="2.5" fill="#0050E6"/>
+            <circle cx="12" cy="32" r="2.5" fill="#0050E6"/>
+            <circle cx="6" cy="25" r="2.5" fill="#0050E6"/>
+            <circle cx="6" cy="17" r="2.5" fill="#0050E6"/>
+            <circle cx="12" cy="10" r="2.5" fill="#0050E6"/>
+            
+            <!-- Texto Be Aware -->
+            <text x="46" y="28" font-family="Onest" font-size="24" font-weight="700" fill="#FFFFFF">Be</text>
+            <text x="78" y="28" font-family="Onest" font-size="24" font-weight="300" fill="#FFFFFF">Aware</text>
+        </svg>
+    </header>
+
+    <main class="flex-grow flex items-center px-8 lg:px-24 py-12 relative z-10">
+        <div class="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
+            
+            <!-- Columna Izquierda: Textos y CTA -->
+            <div class="w-full lg:w-1/2 flex flex-col items-start text-left order-2 lg:order-1">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-white mb-6">
+                    Estamos trabajando para mejorar tu experiencia en el sitio
+                </h1>
+                
+                <p class="text-lg md:text-xl font-light text-gray-300 mb-10 leading-relaxed max-w-lg">
+                    Si deseas ponerte en contacto con nosotros, puedes hacerlo a través de nuestro sitio corporativo In Motion.
+                </p>
+                
+                <a href="https://grupoinmotion.com/be-aware-360/?utm_source=beaware360.com&utm_medium=referral&utm_campaign=ventana_mantenimiento_CX_BA_100726" 
+                   class="btn-hover-effect inline-flex items-center justify-center bg-brand-blue text-white font-semibold text-lg px-10 py-4 rounded-full">
+                    Ir a In Motion
+                </a>
+            </div>
+
+            <!-- Columna Derecha: Imagen Moderna -->
+            <div class="w-full lg:w-1/2 order-1 lg:order-2 flex justify-center lg:justify-end">
+                <div class="relative w-full max-w-[600px] aspect-[4/3] lg:aspect-square rounded-3xl overflow-hidden glow-effect border border-white/5">
+                    <!-- Overlay de gradiente sutil para integrar la imagen con el fondo -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-navy/60 via-transparent to-transparent z-10 pointer-events-none"></div>
+                    <img src="img.2.jpg" alt="Mantenimiento en curso" class="w-full h-full object-cover relative z-0 scale-105 hover:scale-100 transition-transform duration-1000 ease-out" />
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer class="w-full px-8 lg:px-24 pb-12 pt-8 flex flex-col items-center justify-center relative z-10">
+        
+        <!-- Logo Powered by In Motion SVG -->
+        <div class="mb-8">
+            <svg width="220" height="40" viewBox="0 0 220 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Powered by In Motion">
+                <text x="0" y="24" font-family="Onest" font-size="14" font-weight="600" fill="#A1A1AA">powered by</text>
+                
+                <!-- Isotipo In Motion (Puntos) -->
+                <circle cx="95" cy="14" r="3" fill="#00E676"/>
+                <circle cx="95" cy="22" r="3" fill="#0050E6"/>
+                
+                <text x="105" y="25" font-family="Onest" font-size="20" font-weight="800" fill="#FFFFFF">in motion</text>
+            </svg>
+        </div>
+
+        <!-- Línea separadora -->
+        <div class="w-full max-w-4xl h-px bg-white/10 mb-8"></div>
+
+        <!-- Textos legales y ubicaciones (Sin enlaces) -->
+        <div class="text-center space-y-2">
+            <p class="text-xs md:text-sm text-gray-400 font-light tracking-wide">
+                Be Aware 360° presente en Argentina | Brasil | Chile | Colombia | Costa Rica | México | Perú | USA
+            </p>
+            <p class="text-xs text-gray-500 font-light">
+                © 2026 In Motion. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
